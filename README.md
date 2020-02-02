@@ -1,21 +1,12 @@
-Docker Wordpress MySql Demo
-===========================
+Docker Wordpress Create User Password Programmatically Demo
+===========================================================
 
-通过docker-compose将多个docker images（wordpress, mysql, phpMyAdmin) 组合起来，
-搭建一个本地的快速开发wordpress环境。
-
-本地`WordPress-5.3.2`中的文件将被映射到docker container里，我们的修改刷新浏览器后马上可以看到效果。
-
-`docker-entrypoint-initdb.d`下是sql的初始化文件，启动时会自动使用它来初始化数据库
+在wordpress中，如何手动生成密码和用户
 
 ```
 npm run up
 ```
 
-当前登录wordpress的用户名和密码是：
+访问<http://localhost:20080/test.php>后，会自动生成用户`test/123456`。
 
-```
-freewind
-123456
-```
-
+然后打开<http://localhost:20080/wp-admin>，可以用它登录验证。
